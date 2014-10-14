@@ -1,0 +1,44 @@
+-# in app/views/users/new.html.haml
+%h1 Sign up
+
+= form_tag users_path  do 
+
+  = label :user, :username, 'Username'
+  = text_field :user, :username, :id => 'signup_username'
+
+  = label :user, :encrypted_password, 'Password'
+  = password_field_tag :user, :encrypted_password, :value => nil, :id => 'signup_encrypted_password'
+
+  = label :user, :encrypted_password_confirmation, 'Confirm Password'
+  = password_field_tag :user, :encrypted_password_confirmation, :value => nil,:id => 'signup_encrypted_password_confirmation'
+
+  = label :user, :email, 'E-Mail'
+  = email_field_tag :user, :email, :value => nil, :id => 'signup_email'
+
+  = label :user, :fname, 'First Name'
+  = text_field :user, :fname, :id => 'signup_fname'
+
+  = label :user, :lname, 'Last Name'
+  = text_field :user, :lname, :id => 'signup_lname'
+  
+  %h3 Please enter your security questions and answers:
+
+  = label :user, :question_1, 'Question One'
+  = text_field :user, :question_1, :id => 'signup_question_1'
+
+  = label :user, :answer_1, 'Answer One'
+  = text_field :user, :answer_1, :id => 'signup_answer_1'
+
+  = label :user, :question_2, 'Question Two'
+  = text_field :user, :question_2, :id => 'signup_question_2'
+
+  = label :user, :answer_2, 'Answer Two'
+  = text_field :user, :answer_2, :id => 'signup_answer_2'
+
+  = label :user, :question_3, 'Question Three'
+  = text_field :user, :question_3, :id => 'signup_question_3'
+
+  = label :user, :answer_3, 'Answer Three'
+  = text_field :user, :answer_3, :id => 'signup_answer_3'
+
+  = submit_tag 'Create my account', :id => 'signup_submit'

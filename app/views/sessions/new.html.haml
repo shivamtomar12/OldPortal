@@ -1,0 +1,14 @@
+-# in app/views/sessions/new.html.haml
+%h1 User Login
+
+= form_tag login_create_path  do 
+
+  = label :user, :username, 'Username'
+  = text_field :user, :username, :id => 'login_userid'
+
+  = label :user, :encrypted_password, 'Password'
+  = password_field_tag :user, :encrypted_password,:value => nil, :id => 'login_password'
+
+  = submit_tag 'Login', :id => 'login_submit'
+  
+= link_to 'Sign-up for an account', new_user_path , :id => 'login_signup'
